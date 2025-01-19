@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Fact Generator</h1>
+        <p id="fun-fact">Click the button to see a fun fact!</p>
+        <button id="fact-button">Get a Fun Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Mechanical engineering is one of the oldest engineering disciplines.",
+            "The first mechanical engineer is considered to be Archimedes.",
+            "Mechanical engineers design and analyze machines and systems.",
+            "The steam engine, invented in the 18th century, was a major advancement in mechanical engineering.",
+            "Mechanical engineering plays a crucial role in the automotive industry.",
+            "Robotics is a growing field within mechanical engineering.",
+            "Thermodynamics is a key area of study for mechanical engineers.",
+            "Mechanical engineers often work with CAD (Computer-Aided Design) software.",
+            "The field of mechanical engineering is essential for renewable energy technologies.",
+            "Mechanical engineers are involved in the design of HVAC systems."
+        ];
+
+        document.getElementById('fact-button').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fun-fact').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
